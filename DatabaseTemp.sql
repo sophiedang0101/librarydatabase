@@ -13,8 +13,8 @@ CREATE TABLE Author(
 -- Create Book Table
 -- Use auto increment feature to automate the primary key
 CREATE TABLE Book(
-				  BookId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-				  BookTitle VARCHAR(100) NOT NULL,
+		  BookId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		  BookTitle VARCHAR(100) NOT NULL,
                   BookAuthor INT NOT NULL,
                   Genre VARCHAR(50) NOT NULL,
                   CONSTRAINT `fk_BookAuthor` FOREIGN KEY (BookAuthor) REFERENCES Author(AuthorId)
@@ -23,8 +23,8 @@ CREATE TABLE Book(
 -- Create Client Table
 -- Use auto increment feature to automate the primary key
 CREATE TABLE `Client`(
-					ClientId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-					ClientFirstName VARCHAR(50) NOT NULL,
+		    ClientId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		    ClientFirstName VARCHAR(50) NOT NULL,
                     ClientLastName VARCHAR(50) NOT NULL,
                     ClientDoB YEAR NOT NULL,
                     Occupation VARCHAR(100) NOT NULL
@@ -33,9 +33,9 @@ CREATE TABLE `Client`(
 -- Create Borrower Table
 -- Use auto increment feature to automate the primary key
 CREATE TABLE Borrower(
-					   BorrowId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-					   ClientId INT NOT NULL,
-					   BookId INT NOT NULL,
+		       BorrowId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		       ClientId INT NOT NULL,
+		       BookId INT NOT NULL,
                        BorrowDate DATE NOT NULL,
                        CONSTRAINT `fk_ClientID` FOREIGN KEY (ClientId) REFERENCES Client(ClientId),
                        CONSTRAINT `fk_BookID` FOREIGN KEY (BookId) REFERENCES Book(BookId)
