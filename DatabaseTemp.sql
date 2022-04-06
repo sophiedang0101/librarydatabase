@@ -4,10 +4,10 @@ USE Library_Database;
 -- Create Author Table
 -- Use auto increment feature to automate the primary key
 CREATE TABLE Author(
-					AuthorId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-					AuthorFirstName VARCHAR(50) NOT NULL,
-					AuthorLastName VARCHAR(50) NOT NULL,
-					AuthorNationality VARCHAR(100) NOT NULL
+		  AuthorId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		  AuthorFirstName VARCHAR(50) NOT NULL,
+		  AuthorLastName VARCHAR(50) NOT NULL,
+		  AuthorNationality VARCHAR(100) NOT NULL
 );
 
 -- Create Book Table
